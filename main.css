@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgb(130, 130, 130);
+    color: black;
+}
+
+.container{
+    margin: 100px 36%;
+    max-width: 640px;
+    width: 100%;
+}
+
+input::placeholder {
+    color: black;
+    padding: 30px 50px;
+    background-color: aliceblue;
+}
+
+.eValido {
+    background-color:rgb(2, 102, 2) ;
+}
+
+.naoEValido {
+    background-color: brown;
+}
