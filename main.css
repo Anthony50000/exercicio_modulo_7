@@ -8,9 +8,17 @@
 }
 
 .container{
-    margin: 100px 36%;
+    margin: 100px auto;
     max-width: 640px;
     width: 100%;
+}
+
+input, button {
+    display: block;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    resize: none;
 }
 
 input::placeholder {
@@ -19,10 +27,38 @@ input::placeholder {
     background-color: aliceblue;
 }
 
-.eValido {
-    background-color:rgb(2, 102, 2) ;
+button {
+    background-color: #4b8207;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+    cursor: pointer;
 }
 
-.naoEValido {
-    background-color: brown;
+button:hover {
+    background-color: #16bc5e;
+}
+
+#eValido {
+    font-size: 22px;
+    padding: 8px;
+    background-color: rgb(36, 209, 51);
+    color: white;
+    margin-bottom: 8px;
+    display: none;
+    text-align: center;
+}
+
+
+#naoEValido {
+    font-size: 22px;
+    padding: 8px;
+    background-color: red;
+    color: white;
+    margin-bottom: 8px;
+    display: none;
+    text-align: center;
 }

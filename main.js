@@ -1,17 +1,31 @@
 const  form = document.getElementById('form');
-const eValido = document.getElementById('eValido')
-const naoeValido = document.getElementById('naoEValido')
-let formEValido = false
+const eValido = document.getElementById('eValido');
+const naoeValido = document.getElementById('naoEValido');
+
+eValido.style = "display:none";
+naoeValido.style = "display:none";
 
 function validarFormulario() {
-    var campoA = document.getElementById("campoA").value;
-    var campoB = document.getElementById("campoB").value;
-
-    if (campoB <= campoA) {
-        alert("O número B deve ser maior que o número A!");
+    const campoA = parseInt(document.getElementById('campo-a').value);
+    const campoB = parseInt(document.getElementById('campo-b').value);
+    if (campoA < campoB){
+        return true
+    }
+    else{ 
+        return false
     }
 }
+
 form.addEventListener('submit',function(e) {
     e.preventDefault();
-    formEValido = validarFormulario(campoA, campoB);
-})
+    var result = validarFormulario();
+    if(result){
+        eValido.style = "display:block";
+        naoeValido.style = "display:none";
+    }
+    else{
+        eValido.style = "display:none";
+        naoeValido.style = "display:block";
+    }
+});
+
